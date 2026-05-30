@@ -1,4 +1,5 @@
 import "./App.css"
+import { Menu } from "./components/Menu"
 import { MovieFrames } from "./components/MovieFrames"
 import image1 from "./assets/godfather.png"
 import image2 from "./assets/life-of-pi.jpg"
@@ -6,6 +7,7 @@ import image3 from "./assets/mad-max.avif"
 import image4 from "./assets/ryangosling.jpg"
 import image5 from "./assets/the-seventh-seal-chess-game.jpg"
 import image6 from "./assets/truman-show.jpg"
+import menuIcon from "./assets/menu-icon.svg"
 
 function App() {
   const images = [
@@ -18,7 +20,12 @@ function App() {
   ]
 
   return (
-    <div className="flex flex-col items-start">
+    <div className="flex flex-col items-start w-full">
+      <Menu
+        iconSrc={menuIcon}
+        name="Kelvin Andrade"
+        occupation="Produtor Audiovisual"
+      ></Menu>
       <MovieFrames images={images} />
     </div>
   )
