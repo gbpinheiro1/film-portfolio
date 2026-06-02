@@ -1,5 +1,5 @@
 import "./App.css"
-import { Menu } from "./components/Menu"
+import { NavToMenu } from "./components/NavToMenu"
 import { MovieFrames } from "./components/MovieFrames"
 import image1 from "./assets/godfather.png"
 import image2 from "./assets/life-of-pi.jpg"
@@ -21,11 +21,11 @@ function App() {
 
   return (
     <div className="flex flex-col items-start w-full">
-      <Menu
+      <NavToMenu
         iconSrc={menuIcon}
         name="Kelvin Andrade"
         occupation="Produtor Audiovisual"
-      ></Menu>
+      ></NavToMenu>
       <MovieFrames images={images} />
     </div>
   )
