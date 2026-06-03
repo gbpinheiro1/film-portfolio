@@ -8,7 +8,7 @@ type NavToMenuProps = {
 
 export function NavToMenu({ name, iconSrc, occupation }: NavToMenuProps) {
   return (
-    <div className="flex fixed gap-3 p-3">
+    <div className="flex fixed gap-3 p-3 items-center">
       <Link to="/menu">
         <img
           src={iconSrc}
@@ -16,13 +16,15 @@ export function NavToMenu({ name, iconSrc, occupation }: NavToMenuProps) {
           className="w-7 cursor-pointer hover:brightness-75"
         />
       </Link>
-      <div
-        className="flex flex-col text-white font-cinzel  
+      <Link to="/menu">
+        <div
+          className="flex flex-col text-white font-cinzel  
       text-xl hover:brightness-75 cursor-pointer"
-      >
-        <h1>{name}</h1>
-        <h2>{occupation}</h2>
-      </div>
+        >
+          <h1>{name}</h1>
+          <h2>{occupation}</h2>
+        </div>
+      </Link>
     </div>
   )
 }
