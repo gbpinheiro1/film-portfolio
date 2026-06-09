@@ -4,6 +4,13 @@ import logoImdb from "../assets/imdb-logo.svg"
 import { Link } from "react-router-dom"
 
 export function Menu() {
+  const menuItemClassName =
+    "relative group min-h-10 flex items-center justify-center border rounded-md p-3 w-1/2 overflow-hidden bg-black"
+  const transitionClassName =
+    "absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-400 z-0"
+  const hoverClassName =
+    "relative z-10 group-hover:text-black transition-colors duration-400"
+
   return (
     <div className="flex flex-col justify-start items-center gap-7 h-screen">
       <Link to={"/"} className="cursor-default">
@@ -17,57 +24,26 @@ export function Menu() {
       place-items-center cursor-pointer"
       >
         <Link to={"/"} className="flex justify-center w-full">
-          <div
-            className="relative group min-h-10 flex items-center justify-center border rounded-md p-3 w-1/2 
-          overflow-hidden bg-black"
-          >
-            <span
-              className="absolute inset-0 bg-white translate-y-full 
-            group-hover:translate-y-0 transition-transform duration-400 z-0 "
-            ></span>
-            <span className="relative z-10 group-hover:text-black transition-colors duration-400">
-              Trabalhos Selecionados
-            </span>
+          <div className={menuItemClassName}>
+            <span className={transitionClassName}></span>
+            <span className={hoverClassName}>Trabalhos Selecionados</span>
           </div>
         </Link>
 
-        <div
-          className="relative group min-h-10 flex items-center justify-center border rounded-md p-3 w-1/2 
-          overflow-hidden bg-black"
-        >
-          <span
-            className="absolute inset-0 bg-white translate-y-full 
-            group-hover:translate-y-0 transition-transform duration-400 z-0 "
-          ></span>
-          <span className="relative z-10 group-hover:text-black transition-colors duration-400">
-            Outros Trabalhos
-          </span>
+        <Link to={"/projects"} className="flex justify-center w-full">
+          <div className={menuItemClassName}>
+            <span className={transitionClassName}></span>
+            <span className={hoverClassName}>Outros Trabalhos</span>
+          </div>
+        </Link>
+        <div className={menuItemClassName}>
+          <span className={transitionClassName}></span>
+          <span className={hoverClassName}>Contato</span>
         </div>
 
-        <div
-          className="relative group min-h-10 flex items-center justify-center border rounded-md p-3 w-1/2 
-          overflow-hidden bg-black"
-        >
-          <span
-            className="absolute inset-0 bg-white translate-y-full 
-            group-hover:translate-y-0 transition-transform duration-400 z-0 "
-          ></span>
-          <span className="relative z-10 group-hover:text-black transition-colors duration-400">
-            Contato
-          </span>
-        </div>
-
-        <div
-          className="relative group min-h-10 flex items-center justify-center border rounded-md p-3 w-1/2 
-          overflow-hidden bg-black"
-        >
-          <span
-            className="absolute inset-0 bg-white translate-y-full 
-            group-hover:translate-y-0 transition-transform duration-400 z-0 "
-          ></span>
-          <span className="relative z-10 group-hover:text-black transition-colors duration-400">
-            Sobre
-          </span>
+        <div className={menuItemClassName}>
+          <span className={transitionClassName}></span>
+          <span className={hoverClassName}>Sobre</span>
         </div>
       </div>
 
