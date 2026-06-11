@@ -1,14 +1,21 @@
 import { Link } from "react-router-dom"
+import { twMerge } from "tailwind-merge"
 
 type NavToMenuProps = {
   name: string
   iconSrc: string
   occupation: string
+  className?: string
 }
 
-export function NavToMenu({ name, iconSrc, occupation }: NavToMenuProps) {
+export function NavToMenu({
+  name,
+  iconSrc,
+  occupation,
+  className,
+}: NavToMenuProps) {
   return (
-    <div className="flex fixed gap-3 p-3 items-center">
+    <div className={twMerge("flex fixed gap-3 p-3 items-center", className)}>
       <Link to="/menu">
         <img
           src={iconSrc}

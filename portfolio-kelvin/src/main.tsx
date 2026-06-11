@@ -6,36 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import NotFoundPage from "./components/NotFoundPage.tsx"
 import { Menu } from "./pages/Menu.tsx"
 import { OtherProjects } from "./pages/OtherProjects.tsx"
-import project1 from "./assets/godfather.png"
-import project2 from "./assets/truman-show.jpg"
-import project3 from "./assets/the-seventh-seal-chess-game.jpg"
-import project4 from "./assets/mad-max.avif"
-
-const otherProjects = [
-  {
-    imageSrc: project1,
-    title: "O Poderoso Chefão",
-    alt: "Imagem do filme O Poderoso Chefão",
-  },
-
-  {
-    imageSrc: project2,
-    title: "O Show de Truman",
-    alt: "Imagem do filme O Show de Truman",
-  },
-
-  {
-    imageSrc: project3,
-    title: "O Sétimo Selo",
-    alt: "Imagem do filme O Sétimo Selo",
-  },
-
-  {
-    imageSrc: project4,
-    title: "Mad Max",
-    alt: "Imagem do filme Mad Max",
-  },
-]
+import { ProjectPage } from "./pages/ProjectPage.tsx"
+import { projects, otherProjects } from "./data/projects"
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -48,6 +20,14 @@ createRoot(document.getElementById("root")!).render(
           path="/projects"
           element={<OtherProjects projects={otherProjects} />}
         />
+
+        {projects.map((project) => (
+          <Route
+            key={project.id}
+            path={`/projects/${project.id}`}
+            element={<ProjectPage project={project} />}
+          />
+        ))}
       </Routes>
     </BrowserRouter>
   </StrictMode>,
