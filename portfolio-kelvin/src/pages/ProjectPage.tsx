@@ -38,7 +38,7 @@ export function ProjectPage({ project }: ProjectPageProps) {
             </div>
             <div className="max-w-6/10 flex flex-col gap-1.5 mb-1.5">
               <p className="font-josefin text-lg font-bold">{project.genre} </p>
-              <p className="text-wrap overflow-hidden font-josefin">
+              <p className="text-wrap overflow-hidden font-josefin whitespace-pre-line">
                 {project.synopsis}
               </p>
               <a

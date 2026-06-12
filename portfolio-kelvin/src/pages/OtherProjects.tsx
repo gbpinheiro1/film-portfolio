@@ -27,13 +27,13 @@ export function OtherProjects({ projects }: OtherProjectsProps) {
       <header className="flex font-cinzel text-4xl w-full items-center pt-20">
         <h1 className="m-auto">Projetos</h1>
       </header>
-      <div className="flex flex-wrap w-7/10 justify-between gap-y-6">
+      <div className="grid grid-cols-1 grid-rows-11 sm:grid-cols-2 sm:grid-rows-6 xl:grid-rows-4 xl:grid-cols-3 gap-x-6 gap-y-10 mb-9 mx-auto">
         {projects.map((project, index) => {
           return (
             <Link
               to={project.id}
               key={index}
-              className="flex flex-col gap-2 font-josefin text-sm font-bold"
+              className="flex flex-col gap-2 font-josefin text-sm font-bold px-5 sm:px-0"
             >
               <img
                 src={project.imageSrc}
