@@ -19,7 +19,7 @@ export function ProjectPage({ project }: ProjectPageProps) {
           className="relative"
         ></NavToMenu>
       </header>
-      <div className="flex justify-center mx-auto md:w-2/3 lg:w-1/2 mb-2">
+      <div className="flex justify-center mx-auto md:w-2/3 lg:w-1/2 mb-3">
         <div className="flex flex-col gap-3">
           <VideoPlayer videoUrl={project.videoUrl} />
           <hr className="mt-6" />

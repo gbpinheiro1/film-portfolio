@@ -9,6 +9,7 @@ import { OtherProjects } from "./pages/OtherProjects.tsx"
 import { ProjectPage } from "./pages/ProjectPage.tsx"
 import { projects, otherProjects } from "./data/projects"
 import { RootLayout } from "./components/RootLayout.tsx"
+import { Contact } from "./pages/Contact.tsx"
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
         element: <ProjectPage project={project} />,
       })),
       { path: "*", element: <NotFoundPage /> },
+      { path: "/contact", element: <Contact /> },
     ],
   },
 ])

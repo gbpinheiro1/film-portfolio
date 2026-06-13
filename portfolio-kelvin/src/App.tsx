@@ -12,13 +12,21 @@ import menuIcon from "./assets/menu-icon.svg"
 
 function App() {
   const images = [
-    { src: image1, alt: "Capa do Filme: Elas vêm de lá" },
-    { src: image2, alt: "Capa do Filme: Laços de Natal" },
-    { src: image3, alt: "Capa do Filme: Mesmo que Doa" },
-    { src: image4, alt: "Capa do Filme: No Norte da Saudade" },
-    { src: image5, alt: "Capa do Filme: A Bruxa e o Minhoco" },
-    { src: image6, alt: "Capa do Filme: Piedra Blanca" },
-    { src: image7, alt: "Capa do Filme: Eles" },
+    { src: image1, alt: "Capa do Filme: Elas vêm de lá", id: "elas-vem-de-la" },
+    { src: image2, alt: "Capa do Filme: Laços de Natal", id: "laços-de-natal" },
+    { src: image3, alt: "Capa do Filme: Mesmo que Doa", id: "mesmo-que-doa" },
+    {
+      src: image4,
+      alt: "Capa do Filme: No Norte da Saudade",
+      id: "norte-da-saudade",
+    },
+    {
+      src: image5,
+      alt: "Capa do Filme: A Bruxa e o Minhoco",
+      id: "a-bruxa-e-o-minhoco",
+    },
+    { src: image6, alt: "Capa do Filme: Piedra Blanca", id: "piedra-blanca" },
+    { src: image7, alt: "Capa do Filme: Eles", id: "eles" },
   ]
 
   return (

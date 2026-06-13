@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 
 export function Menu() {
   const menuItemClassName =
-    "relative group min-h-10 flex items-center justify-center border rounded-md p-3 w-1/2 overflow-hidden bg-black"
+    "relative group min-h-10 flex items-center justify-center border rounded-md p-3 w-1/2 overflow-hidden bg-black cursor-pointer"
   const transitionClassName =
     "absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-400 z-0"
   const hoverClassName =
@@ -21,21 +21,22 @@ export function Menu() {
 
       <div
         className="grid grid-cols-1 gap-7 font-josefin font-light text-4xl w-full 
-      place-items-center cursor-pointer"
+      place-items-center"
       >
-        <Link to={"/"} className="flex justify-center w-full">
-          <div className={menuItemClassName}>
+        <div className={menuItemClassName}>
+          <Link to={"/"}>
             <span className={transitionClassName}></span>
             <span className={hoverClassName}>Trabalhos Selecionados</span>
-          </div>
-        </Link>
+          </Link>
+        </div>
 
-        <Link to={"/projects"} className="flex justify-center w-full">
-          <div className={menuItemClassName}>
+        <div className={menuItemClassName}>
+          <Link to={"/projects"}>
             <span className={transitionClassName}></span>
             <span className={hoverClassName}>Outros Trabalhos</span>
-          </div>
-        </Link>
+          </Link>
+        </div>
+
         <div className={menuItemClassName}>
           <span className={transitionClassName}></span>
           <span className={hoverClassName}>Contato</span>
