@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import "tailwindcss";
 
 body {
@@ -12,4 +13,8 @@ body {
   --font-cinzel: "Cinzel", serif;
   --font-josefin: "Josefin Sans", sans-serif;
   --font-jost: "Jost", serif;
+  --font-bebas: "Bebas Neue", serif;
+
+  --color-zinc-800: oklch(19% 0.006 285.885);
+  --color-zinc-700: oklch(26.5% 0.006 285.885);
 }

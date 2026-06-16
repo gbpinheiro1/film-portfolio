@@ -38,8 +38,10 @@ export function Menu() {
         </div>
 
         <div className={menuItemClassName}>
-          <span className={transitionClassName}></span>
-          <span className={hoverClassName}>Contato</span>
+          <Link to={"/contact"}>
+            <span className={transitionClassName}></span>
+            <span className={hoverClassName}>Contato</span>
+          </Link>
         </div>
 
         <div className={menuItemClassName}>
