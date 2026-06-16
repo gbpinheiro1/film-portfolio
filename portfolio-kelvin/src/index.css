@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 
 body {
@@ -10,4 +11,5 @@ body {
 @theme {
   --font-cinzel: "Cinzel", serif;
   --font-josefin: "Josefin Sans", sans-serif;
+  --font-jost: "Jost", serif;
 }
