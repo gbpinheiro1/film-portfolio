@@ -10,6 +10,7 @@ import { ProjectPage } from "./pages/ProjectPage.tsx"
 import { projects, otherProjects } from "./data/projects"
 import { RootLayout } from "./components/RootLayout.tsx"
 import { Contact } from "./pages/Contact.tsx"
+import { About } from "./pages/About.tsx"
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,7 @@ const router = createBrowserRouter([
       })),
       { path: "*", element: <NotFoundPage /> },
       { path: "/contact", element: <Contact /> },
+      { path: "/about", element: <About /> },
     ],
   },
 ])

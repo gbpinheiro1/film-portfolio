@@ -45,8 +45,10 @@ export function Menu() {
         </div>
 
         <div className={menuItemClassName}>
-          <span className={transitionClassName}></span>
-          <span className={hoverClassName}>Sobre</span>
+          <Link to={"/about"}>
+            <span className={transitionClassName}></span>
+            <span className={hoverClassName}>Sobre</span>
+          </Link>
         </div>
       </div>
 

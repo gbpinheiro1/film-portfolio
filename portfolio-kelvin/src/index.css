@@ -15,6 +15,6 @@ body {
   --font-jost: "Jost", serif;
   --font-bebas: "Bebas Neue", serif;
 
-  --color-zinc-800: oklch(19% 0.006 285.885);
-  --color-zinc-700: oklch(26.5% 0.006 285.885);
+  --color-zinc-800: oklch(17.5% 0.006 285.885);
+  --color-zinc-700: oklch(27.5% 0.006 285.885);
 }

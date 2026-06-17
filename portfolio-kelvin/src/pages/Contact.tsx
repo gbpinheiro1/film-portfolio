@@ -11,7 +11,7 @@ export function Contact() {
   const form = useRef<HTMLFormElement>(null)
 
   const sendEmail = (e: SubmitEvent<HTMLFormElement>) => {
-    e.preventDefault() //Previnir que a página inteira recarregue quando o usuário enviar a mensagem
+    e.preventDefault() //Previnir que a página inteira recarregue quando enviar a mensagem
 
     emailjs
       .sendForm(
@@ -75,7 +75,7 @@ export function Contact() {
           onSubmit={sendEmail}
           className=" flex flex-col gap-1 bg-zinc-800 text-zinc-200 w-2/3 max-w-150 px-6 py-3 rounded-lg font-jost"
         >
-          <h1 className="text-center text-2xl font-bold">Enviar Mensagem</h1>
+          <h1 className="text-center text-2xl font-medium">Enviar Mensagem</h1>
           <div className="mt-2">
             <label htmlFor="txt-input">Nome Completo</label>
             <input
@@ -112,7 +112,7 @@ export function Contact() {
 
             <button
               type="submit"
-              className="w-full h-14 bg-zinc-700 border-none rounded-md shadow-sm cursor-pointer text-lg text-white font-semibold mt-5 hover:bg-black transition-colors duration-400"
+              className="w-full h-14 bg-zinc-700 border-none rounded-md shadow-sm cursor-pointer text-lg text-white font-semibold mt-5 hover:bg-zinc-100 hover:text-black transition-colors duration-400"
             >
               Enviar Mensagem
             </button>
