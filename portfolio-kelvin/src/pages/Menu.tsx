@@ -5,22 +5,22 @@ import { Link } from "react-router-dom"
 
 export function Menu() {
   const menuItemClassName =
-    "relative group min-h-10 flex items-center justify-center border rounded-md p-3 w-1/2 overflow-hidden bg-black cursor-pointer"
+    "relative group min-h-10 flex items-center justify-center border rounded-md p-3 w-3/4 custom:w-1/2 overflow-hidden bg-black cursor-pointer"
   const transitionClassName =
     "absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-400 z-0"
   const hoverClassName =
     "relative z-10 group-hover:text-black transition-colors duration-400"
 
   return (
-    <div className="flex flex-col justify-start items-center gap-7 h-screen">
+    <div className="flex flex-col items-center justify-center gap-10 md:gap-7 h-screen">
       <Link to={"/"} className="cursor-default">
-        <h1 className="text-white font-cinzel text-4xl mb-10 mt-10 cursor-pointer hover:brightness-50">
+        <h1 className="text-white font-cinzel text-2xl sm:text-3xl md:text-4xl mb-2 md:mb-5 cursor-pointer hover:brightness-50">
           Kelvin Andrade
         </h1>
       </Link>
 
       <div
-        className="grid grid-cols-1 gap-7 font-josefin font-light text-4xl w-full 
+        className="grid grid-cols-1 gap-7 font-josefin font-light text-lg sm:text-2xl md:text-4xl w-full 
       place-items-center"
       >
         <div className={menuItemClassName}>
@@ -52,12 +52,12 @@ export function Menu() {
         </div>
       </div>
 
-      <footer className="flex gap-3 justify-center items-center mt-5">
+      <footer className="flex gap-3 justify-center items-center">
         <a href="https://www.instagram.com/" target="blank">
           <img
             src={logoInsta}
             alt=""
-            className="size-10 cursor-pointer hover:brightness-50"
+            className="size-7 sm:size-8 md:size-10 cursor-pointer hover:brightness-50"
           />
         </a>
 
@@ -65,7 +65,7 @@ export function Menu() {
           <img
             src={logoLinkedin}
             alt=""
-            className="size-17 bg-cover bg-center grayscale contrast-500 mr-1 cursor-pointer hover:brightness-50 hover:contrast-100"
+            className="size-13 sm:size-17 bg-cover bg-center grayscale contrast-500 mr-1 cursor-pointer hover:brightness-50 hover:contrast-100"
           />
         </a>
 
@@ -73,7 +73,7 @@ export function Menu() {
           <img
             src={logoImdb}
             alt=""
-            className="size-9 hover:brightness-50 cursor-pointer brightness-125"
+            className="size-6 sm:size-7 md:size-9 hover:brightness-50 cursor-pointer brightness-125"
           />
         </a>
       </footer>

@@ -35,6 +35,7 @@ function App() {
         iconSrc={menuIcon}
         name="Kelvin Andrade"
         occupation="Produtor Audiovisual"
+        className="md:fixed"
       ></NavToMenu>
       <MovieFrames images={images} />
     </div>
