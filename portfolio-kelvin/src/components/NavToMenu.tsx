@@ -17,16 +17,16 @@ export function NavToMenu({
   return (
     <div
       className={twMerge(
-        "flex items-center relative justify-center w-full md:gap-3 md:p-3 md:justify-start md:w-fit",
+        "flex items-center relative justify-center w-full md:gap-3 md:p-3 xs:px-0 md:justify-start md:w-fit",
         className,
       )}
     >
-      <div className="md:relative absolute md:left-0 left-4">
+      <div className="md:relative absolute md:left-0 xs:left-4 left-2">
         <Link to="/menu">
           <img
             src={iconSrc}
             alt="Menu icon"
-            className="w-7.75 xs:w-8.5 md:w-7 cursor-pointer hover:brightness-75"
+            className="w-7.5 xs:w-8 md:w-7 cursor-pointer hover:brightness-75"
           />
         </Link>
       </div>

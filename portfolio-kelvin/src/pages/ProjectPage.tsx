@@ -10,8 +10,8 @@ type ProjectPageProps = {
 
 export function ProjectPage({ project }: ProjectPageProps) {
   return (
-    <div className="flex flex-col px-2 sm:px-0 py-3 sm:py-0 gap-5 w-full">
-      <header className="flex mb-5 md:mb-10 xl:mb-0">
+    <div className="flex flex-col px-0 custom:px-2 sm:px-0 py-3 sm:py-0 gap-5 w-full">
+      <header className="flex mb-0 xs:mb-5 md:mb-10 xl:mb-0">
         <NavToMenu
           name="Kelvin Andrade"
           occupation="Produtor Audiovisual"
@@ -19,33 +19,40 @@ export function ProjectPage({ project }: ProjectPageProps) {
           className="relative"
         ></NavToMenu>
       </header>
-      <div className="flex justify-center mx-auto w-2/3 lg:w-1/2 mb-3">
-        <div className="flex flex-col gap-3">
+      <div className="flex justify-center mx-auto w-9/10 sm:w-2/3 lg:w-1/2 mb-2">
+        <div className="flex flex-col gap-5 custom:gap-4.5">
           <VideoPlayer videoUrl={project.videoUrl} />
-          <hr className="mt-6" />
-          <div className="flex w-full mt-1 justify-between gap-8 lg:gap-10 xl:gap-15">
-            <div className="flex flex-col gap-2 max-w-4/10 text-base/tight md:text-lg/tight justify-start">
-              <h1 className="font-josefin font-bold">
+          <hr className="mt-6 custom:flex hidden" />
+          <div className="flex flex-col custom:flex-row w-full justify-between gap-5 custom:gap-8 lg:gap-10 xl:gap-12 mt-0 xs:mt-1.5 custom:mt-0">
+            <div className="flex flex-col gap-0 custom:gap-2 max-w-full custom:w-8/10 sm:w-7/10 text-base/tight md:text-lg/tight justify-start not-custom:items-center">
+              <h1 className="font-josefin font-bold text-base/tight xs:text-xl/tight not-custom:text-center">
                 {project.title.toUpperCase()}
               </h1>
-              <h2 className="font-josefin">{project.role}</h2>
+
+              <p className="custom:hidden flex font-josefin text-xs text-center">
+                {project.genre}
+              </p>
+
+              <h2 className="font-josefin text-sm xs:text-base not-custom:mt-2 not-custom:font-bold not-custom:mb-1.5 not-custom:text-center">
+                {project.role}
+              </h2>
             </div>
-            <div className="flex flex-col justify-start flex-1 hyphens-auto text-justify gap-2">
-              <p className="font-josefin text-base/tight md:text-lg/tight font-bold text-left">
+
+            <div className="flex flex-col gap-1 custom:gap-2 custom:max-w-6/10">
+              <p className="font-josefin text-base custom:text-base/tight md:text-lg/tight font-bold text-left custom:flex hidden">
                 {project.genre}{" "}
               </p>
-              <p className="text-wrap overflow-hidden font-josefin whitespace-pre-line">
+
+              <p className="hyphens-auto font-josefin text-sm xs:text-base whitespace-pre-line custom:px-0 xs:px-5 px-2">
+                <p className="not-custom:inline custom:hidden font-bold ">
+                  Sinopse:{" "}
+                </p>
                 {project.synopsis}
               </p>
-              <a
-                href="/projects"
-                className="font-josefin text-sm text-end italic mt-5 text-amber-300"
-              >
-                Ver mais projetos
-              </a>
             </div>
           </div>
-          <hr className="mb-6" />
+          <hr className="w-full custom:mb-6" />
+
           {project.stillImagesSrc.map((imagesrc, index) => {
             return (
               <img
@@ -56,7 +63,16 @@ export function ProjectPage({ project }: ProjectPageProps) {
               />
             )
           })}
+          <hr className="w-full custom:mt-6" />
         </div>
+      </div>
+      <div className="flex justify-center">
+        <a
+          href="/projects"
+          className="font-josefin text-xs xs:text-sm text-end italic  mb-1 custom:mb-2 text-amber-300"
+        >
+          Ver mais projetos
+        </a>
       </div>
     </div>
   )
