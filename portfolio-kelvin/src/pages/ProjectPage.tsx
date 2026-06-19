@@ -11,7 +11,7 @@ type ProjectPageProps = {
 export function ProjectPage({ project }: ProjectPageProps) {
   return (
     <div className="flex flex-col px-2 sm:px-0 py-3 sm:py-0 gap-5 w-full">
-      <header className="flex">
+      <header className="flex mb-5 md:mb-10 xl:mb-0">
         <NavToMenu
           name="Kelvin Andrade"
           occupation="Produtor Audiovisual"
@@ -19,19 +19,21 @@ export function ProjectPage({ project }: ProjectPageProps) {
           className="relative"
         ></NavToMenu>
       </header>
-      <div className="flex justify-center mx-auto md:w-2/3 lg:w-1/2 mb-3">
+      <div className="flex justify-center mx-auto w-2/3 lg:w-1/2 mb-3">
         <div className="flex flex-col gap-3">
           <VideoPlayer videoUrl={project.videoUrl} />
           <hr className="mt-6" />
-          <div className="flex w-full mt-1 gap-15">
-            <div className="max-w-4/10">
-              <h1 className="font-josefin font-bold text-lg">
+          <div className="flex w-full mt-1 justify-between gap-8 lg:gap-10 xl:gap-15">
+            <div className="flex flex-col gap-2 max-w-4/10 text-base/tight md:text-lg/tight justify-start">
+              <h1 className="font-josefin font-bold">
                 {project.title.toUpperCase()}
               </h1>
-              <h2 className="font-josefin text-lg">{project.role}</h2>
+              <h2 className="font-josefin">{project.role}</h2>
             </div>
-            <div className="flex flex-col flex-1 hyphens-auto text-justify gap-1">
-              <p className="font-josefin text-lg font-bold">{project.genre} </p>
+            <div className="flex flex-col justify-start flex-1 hyphens-auto text-justify gap-2">
+              <p className="font-josefin text-base/tight md:text-lg/tight font-bold text-left">
+                {project.genre}{" "}
+              </p>
               <p className="text-wrap overflow-hidden font-josefin whitespace-pre-line">
                 {project.synopsis}
               </p>
