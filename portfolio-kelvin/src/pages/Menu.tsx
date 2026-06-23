@@ -24,28 +24,28 @@ export function Menu() {
       place-items-center"
       >
         <div className={menuItemClassName}>
-          <Link to={"/"}>
+          <Link to={"/"} className="flex w-full justify-center">
             <span className={transitionClassName}></span>
             <span className={hoverClassName}>Trabalhos Selecionados</span>
           </Link>
         </div>
 
         <div className={menuItemClassName}>
-          <Link to={"/projects"}>
+          <Link to={"/projects"} className="flex w-full justify-center">
             <span className={transitionClassName}></span>
             <span className={hoverClassName}>Outros Trabalhos</span>
           </Link>
         </div>
 
         <div className={menuItemClassName}>
-          <Link to={"/contact"}>
+          <Link to={"/contact"} className="flex w-full justify-center">
             <span className={transitionClassName}></span>
             <span className={hoverClassName}>Contato</span>
           </Link>
         </div>
 
         <div className={menuItemClassName}>
-          <Link to={"/about"}>
+          <Link to={"/about"} className="flex w-full justify-center">
             <span className={transitionClassName}></span>
             <span className={hoverClassName}>Sobre</span>
           </Link>

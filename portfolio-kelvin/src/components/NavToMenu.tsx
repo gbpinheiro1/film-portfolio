@@ -21,12 +21,12 @@ export function NavToMenu({
         className,
       )}
     >
-      <div className="md:relative absolute md:left-0 xs:left-4 left-2">
+      <div className="md:relative absolute md:left-0 left-4">
         <Link to="/menu">
           <img
             src={iconSrc}
             alt="Menu icon"
-            className="w-7.5 xs:w-8 md:w-7 cursor-pointer hover:brightness-75"
+            className="w-6 xs:w-6.5 md:w-7 cursor-pointer hover:brightness-75"
           />
         </Link>
       </div>

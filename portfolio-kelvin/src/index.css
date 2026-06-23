@@ -18,7 +18,7 @@ body {
   --color-zinc-800: oklch(17.5% 0.006 285.885);
   --color-zinc-700: oklch(27.5% 0.006 285.885);
 
-  --breakpoint-custom: 440px;
-  --breakpoint-xs: 375px;
-  --breakpoint-lgscreen: 1920px;
+  --breakpoint-custom: 27.5rem;
+  --breakpoint-xs: 23.43rem;
+  --breakpoint-lgscreen: 120rem;
 }
