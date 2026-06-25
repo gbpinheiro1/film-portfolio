@@ -53,7 +53,7 @@ export function Menu() {
       </div>
 
       <footer className="flex gap-3 justify-center items-center">
-        <a href="https://www.instagram.com/" target="blank">
+        <a href="https://www.instagram.com/kelvinandrad_e" target="blank">
           <img
             src={logoInsta}
             alt=""
@@ -61,7 +61,7 @@ export function Menu() {
           />
         </a>
 
-        <a href="https://www.linkedin.com/" target="blank">
+        <a href="https://www.linkedin.com/in/kelvin-andrade-/" target="blank">
           <img
             src={logoLinkedin}
             alt=""
@@ -69,7 +69,7 @@ export function Menu() {
           />
         </a>
 
-        <a href="https://www.imdb.com/pt/" target="blank">
+        <a href="https://www.imdb.com/pt/name/nm15534272" target="blank">
           <img
             src={logoImdb}
             alt=""
