@@ -67,7 +67,7 @@ export function ProjectPage({ project }: ProjectPageProps) {
       </div>
       <div className="flex justify-center">
         <a
-          href="/projects"
+          href="https://kelvinandrade.vercel.app/projects/"
           className="font-josefin text-xs xs:text-sm md:text-base lgscreen:text-2xl text-end italic  mb-2  text-amber-300"
         >
           Ver mais projetos
