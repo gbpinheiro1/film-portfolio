@@ -1,6 +1,7 @@
 import { VideoPlayer } from "../components/VideoPlayer"
 import { NavToMenu } from "../components/NavToMenu"
 import iconSrc from "../assets/menu-icon.svg"
+import { Link } from "react-router-dom"
 
 import type { IndividualProjects as Project } from "../data/projects.ts"
 
@@ -66,12 +67,12 @@ export function ProjectPage({ project }: ProjectPageProps) {
         </div>
       </div>
       <div className="flex justify-center">
-        <a
-          href="https://kelvinandrade.vercel.app/projects/"
-          className="font-josefin text-xs xs:text-sm md:text-base lgscreen:text-2xl text-end italic  mb-2  text-amber-300"
+        <Link
+          to="/projects"
+          className="font-josefin text-xs xs:text-sm md:text-base lgscreen:text-2xl text-end italic mb-2 text-amber-300"
         >
           Ver mais projetos
-        </a>
+        </Link>
       </div>
     </div>
   )
